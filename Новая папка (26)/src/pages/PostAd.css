@@ -1,0 +1,163 @@
+.post-ad-page {
+    background-color: var(--color-bg);
+    min-height: calc(100vh - var(--header-height));
+    padding: 2rem 0 4rem;
+}
+
+.back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+    transition: color 0.2s;
+    width: fit-content;
+}
+
+.back-link:hover {
+    color: var(--color-primary);
+}
+
+.post-ad-card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.post-ad-header {
+    background-color: var(--color-primary);
+    color: var(--color-surface);
+    padding: 2rem;
+    text-align: center;
+}
+
+.post-ad-header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.post-ad-header p {
+    opacity: 0.9;
+}
+
+.post-ad-form {
+    padding: 2rem;
+}
+
+.form-section {
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.form-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.form-section h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-main);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--color-text-main);
+}
+
+.select-input,
+.textarea-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background-color: #f9fafb;
+    font-family: inherit;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+}
+
+.select-input:focus,
+.textarea-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background-color: white;
+}
+
+.textarea-input {
+    resize: vertical;
+}
+
+.form-row {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+/* Photo Upload */
+.photo-upload-area {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.upload-box {
+    width: 120px;
+    height: 120px;
+    border: 2px dashed var(--color-border);
+    border-radius: var(--radius-sm);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--color-text-secondary);
+    gap: 0.5rem;
+    transition: all 0.2s;
+    background-color: #f9fafb;
+}
+
+.upload-box:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+    background-color: #f0fdFa;
+    /* Light teal tint */
+}
+
+.upload-box.empty {
+    cursor: default;
+    background-color: #f2f4f5;
+    border-style: solid;
+}
+
+/* Actions */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}

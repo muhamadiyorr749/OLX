@@ -1,0 +1,108 @@
+.auth-page {
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-bg);
+    padding: 2rem 1rem;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 480px;
+}
+
+.auth-card {
+    background: var(--color-surface);
+    padding: 3rem 2rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    text-align: center;
+}
+
+.auth-header {
+    margin-bottom: 2rem;
+}
+
+.auth-header h2 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.auth-header p {
+    color: var(--color-text-secondary);
+}
+
+.auth-form {
+    margin-bottom: 1.5rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.auth-footer p {
+    color: var(--color-text-secondary);
+}
+
+.auth-toggle-btn {
+    color: var(--color-accent);
+    /* Use the bright accent color */
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.auth-toggle-btn:hover {
+    color: var(--color-primary);
+}
+
+/* Back Link Styles */
+.auth-back-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-text-secondary);
+    margin-bottom: 2rem;
+    font-weight: 500;
+    transition: color 0.2s;
+    justify-content: center;
+    /* Center since card text is centered */
+}
+
+.auth-back-link:hover {
+    color: var(--color-primary);
+}
+
+/* Auth Language Selector */
+.auth-language-selector {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 2rem;
+}
+
+.auth-language-selector .lang-btn {
+    background: transparent;
+    border: 1px solid #d8dfe0;
+    color: #406367;
+    padding: 6px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.auth-language-selector .lang-btn:hover {
+    background: rgba(0, 47, 52, 0.05);
+}
+
+.auth-language-selector .lang-btn.active {
+    background: var(--color-primary);
+    color: #fff;
+    border-color: var(--color-primary);
+}

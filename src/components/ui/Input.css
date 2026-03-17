@@ -1,0 +1,77 @@
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.input-field {
+    width: 100%;
+    height: 48px;
+    border: 2px solid transparent;
+    /* No border usually for main search */
+    background-color: var(--color-surface);
+    padding: 0 16px;
+    font-size: 1rem;
+    color: var(--color-text-main);
+    border-radius: var(--radius-sm);
+    transition: all var(--transition-normal);
+}
+
+.input-field:focus {
+    border-color: var(--color-accent);
+}
+
+.input-with-icon {
+    padding-left: 48px;
+}
+
+.input-with-right-element {
+    padding-right: 48px;
+}
+
+.input-icon {
+    position: absolute;
+    left: 16px;
+    color: var(--color-text-secondary);
+    pointer-events: none;
+}
+
+.input-right-element {
+    position: absolute;
+    right: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-secondary);
+}
+
+.input-password-toggle {
+    cursor: pointer;
+    background: transparent;
+    border: none;
+    padding: 0;
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+}
+
+.input-password-toggle:hover {
+    color: var(--color-primary);
+}
+
+.input-password-toggle:focus {
+    outline: none;
+}
+
+/* Variants for different contexts can be added here or via utility classes */
+.input-bordered .input-field {
+    border: 1px solid #cbd5e1;
+}
+
+.input-bordered .input-field:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 4px rgba(0, 47, 52, 0.1);
+}

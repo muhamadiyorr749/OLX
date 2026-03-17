@@ -1,0 +1,192 @@
+.messages-page {
+    padding: 2rem 0 4rem;
+    background-color: #f2f4f5;
+    min-height: 90vh;
+}
+
+.messages-header {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.messages-header h1 {
+    font-size: 2rem;
+    color: #002f34;
+    font-weight: 700;
+}
+
+.messages-header p {
+    color: #7f9799;
+    font-size: 1.1rem;
+}
+
+.messages-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.message-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: 1fr 2fr 48px;
+    gap: 1.5rem;
+    padding: 1rem;
+    position: relative;
+    border-left: 4px solid #3a9b6d;
+    /* Sent message color */
+    transition: transform 0.2s ease;
+}
+
+.message-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.message-product {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.message-product img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.message-product h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #002f34;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.message-product .price {
+    font-weight: 700;
+}
+
+.message-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.message-meta-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.message-user-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    color: #406367;
+    font-weight: 500;
+}
+
+.message-status-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.message-status-tag.sent {
+    background-color: #e6f7ef;
+    color: #128157;
+}
+
+.message-status-tag.received {
+    background-color: #eef2ff;
+    color: #3b82f6;
+}
+
+.message-content .text {
+    background: #f8fafb;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #002f34;
+    border: 1px solid #eef2f3;
+    line-height: 1.5;
+    font-style: italic;
+}
+
+.message-content .date {
+    font-size: 0.75rem;
+    color: #7f9799;
+    align-self: flex-end;
+}
+
+.delete-btn {
+    align-self: center;
+    background: none;
+    border: none;
+    color: #ff5636;
+    cursor: pointer;
+    transition: color 0.2s;
+    opacity: 0.6;
+}
+
+.delete-btn:hover {
+    color: #d32f2f;
+    opacity: 1;
+}
+
+.no-messages {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-messages h3 {
+    margin-top: 1.5rem;
+    color: #002f34;
+}
+
+.no-messages p {
+    color: #7f9799;
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 640px) {
+    .message-card {
+        grid-template-columns: 1fr;
+        padding-bottom: 3.5rem;
+    }
+
+    .message-product {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .message-product img {
+        width: 80px;
+        height: 60px;
+    }
+
+    .delete-btn {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
