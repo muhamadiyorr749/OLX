@@ -4,13 +4,17 @@ import { translations } from '../translations';
 const LanguageContext = createContext();
 
 export const LanguageProvider = ({ children }) => {
-  const [language, setLanguage] = useState(localStorage.getItem('language') || 'uz');
+  const [language, setLanguage] = useState(() => {
+    const saved = localStorage.getItem('language');
+    return (saved && translations[saved]) ? saved : 'uz';
+  });
 
   useEffect(() => {
     localStorage.setItem('language', language);
   }, [language]);
 
   const t = (key) => {
+    if (!translations[language]) return key;
     return translations[language][key] || key;
   };
 

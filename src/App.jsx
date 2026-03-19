@@ -12,6 +12,7 @@ import { LanguageProvider } from './context/LanguageContext';
 import ProductDetails from './pages/ProductDetails';
 import Profile from './pages/Profile';
 import Admin from './pages/Admin';
+import NotFound from './pages/NotFound';
 
 // Sahifalar o'zgarganida yuqoriga qaytarish
 const ScrollToTop = () => {
@@ -54,6 +55,9 @@ function App() {
                   <Route path="/messages" element={<ProtectedRoute><Messages /></ProtectedRoute>} />
                   <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
                   <Route path="/admin" element={<ProtectedRoute><Admin /></ProtectedRoute>} />
+
+                  {/* Catch-all route */}
+                  <Route path="*" element={<NotFound />} />
                 </Routes>
               </main>
             </div>
